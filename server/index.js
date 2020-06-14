@@ -22,9 +22,9 @@ app.use(express.json())
 
 app.use(express.static(__dirname + '/../build'));
 
-app.use('/', express.static('public')) //-- to serve frontend
+// app.use('/', express.static('public')) //-- to serve frontend
 
-app.use('/assets', express.static('assets'))
+app.use('/api/assets', express.static(__dirname + '/assets'))
 
 const chartsRoute = require('./routes/charts')
 app.use('/api/charts', chartsRoute)

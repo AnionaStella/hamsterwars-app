@@ -1,0 +1,18 @@
+import React from 'react';
+
+const PlayCard = ({ hamster, winner }) => {
+
+    const imgUrl = "http://localhost:3003/assets/";
+
+    return (
+        <div className="PlayCard">
+            <img src={imgUrl + hamster.imgName} alt="profile-pic" className="profile-img"/>
+            <h1>{hamster.name} </h1>
+            <p>age: {hamster.age}</p>
+            <p>favorite food: {hamster.favFood}</p>
+            {winner ? <> <p>{hamster.name} has won {hamster.wins} times </p> </> : '' }
+        </div>
+    );
+}
+
+export default PlayCard;

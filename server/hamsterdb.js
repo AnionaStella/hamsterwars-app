@@ -1,12 +1,12 @@
 const firebase = require("firebase")
 // Required for side-effects
 require("firebase/firestore")
-const firebaseKey = require('./firebaseKey.json')
+// const firebaseKey = require('./firebaseKey.json')
 const hamsterData = require('./data.json')
 
 // Initialize Cloud Firestore through Firebase
 firebase.initializeApp({
-  firebaseKey,
+  firebaseKey: process.env.API_KEY,
   authDomain: "hamster-project.firebaseapp.com",
   projectId: "hamster-project"
 });

@@ -1,18 +1,3 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -24,15 +9,104 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+header nav a {
+    color: white;
+    padding: 1em 0.5em;
+    border: 1px solid cadetblue;
+    border-bottom: none;
+}
+header nav a:active {
+    background-color: white;
+    border-bottom: none;
+    color: cadetblue;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+main {
+    padding: 1em;
+}
+
+.winner {
+    border: 5px solid green;
+
+}
+.PlayCard .left {
+    flex-direction: row;
+}
+.Playcard .right {
+    flex-direction: row;
+}
+
+.Play {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    padding: 2em;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.PlayCard {
+    display: block;
+    border: 2px solid hotpink;
+    padding: 1em;
+    width: 30em;
+    height: 30em;
+    margin: 1em;
+}
+.PlayCard img {
+    max-width: 20em;
+    max-height: 20em;
+}
+.Start {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    padding: 2em;
+    justify-content: center;
+    align-items: center;
+}
+.Start button {
+    margin-left: 47%;
+    font-size: large;
+    border-radius: 20em;
+    padding: 1em;
+    background-color: hotpink;
+    border: 2px outset pink;
+    max-width: 10em;
+}
+.Start .fight {
+    margin-left: 45%;
+}
+.hamsterList {
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 2em;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.hamsterList .allHamsters {
+    padding-left: 3em;
+}
+.ProfileCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    border: 2px solid hotpink;
+    padding: 1em;
+    width: 25em;
+    height: 35em;
+    margin: 1em;
+}
+.ProfileCard p {
+    font-size: small;
+}
+.ProfileCard h1 {
+    font-size: medium;
+    flex-wrap: wrap;
+}
+.ProfileCard img {
+    max-width: 15em;
+    max-height: 15em;
 }

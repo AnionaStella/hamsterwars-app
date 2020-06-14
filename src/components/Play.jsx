@@ -12,7 +12,7 @@ const Play = () => {
     // let card = '🐹';
     let history = useHistory();
     let routeChange = () => {
-        let path = `newPath`;
+        let path = '/mostBattled';
         history.push(path);
       }
 

@@ -63,7 +63,7 @@ const saveGame = (hamster1, hamster2, winningHamster, winner, setWinner, setHams
             headers: { 'Content-Type': 'application/json', 'authorization':'abc1234' },
             body: JSON.stringify(game)
         };
-        fetch('http://localhost:3003/games', requestOptions)
+        fetch('/api/games', requestOptions)
         .then(response => response.json())
         .then(data => {
             setHamster1(data.contestants[0])

@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import { useHistory } from "react-router-dom";
 import PlayCard from './PlayCard';
 // import styled from 'styled-components';
 
@@ -9,6 +10,11 @@ const Play = () => {
     const [toggleNewGame, setToggleNewGame] = useState(false);
     const [winner, setWinner] = useState(null);
     // let card = '🐹';
+    let history = useHistory();
+    let routeChange = () => {
+        let path = `newPath`;
+        history.push(path);
+      }
 
     useEffect(() => {
         async function fetchHamsters() {
@@ -27,12 +33,12 @@ const Play = () => {
     
     if (hamster1 !== null) {
         randomHamster1 = (<div className={winner !== null && winner.id === hamster1.id ? 'winner': 'left'} 
-                onClick={() => saveGame(hamster1, hamster2, hamster1, winner, setWinner, setHamster1, setHamster2)}>
+                onClick={() => saveGame(hamster1, hamster2, hamster1, winner, setWinner, setHamster1, setHamster2, routeChange)}>
                 <PlayCard winner={winner !== null && winner.id === hamster1.id} hamster={hamster1}/></div>)
     }
     if (hamster2 !== null) {
         randomHamster2 = (<div className={winner !== null && winner.id === hamster2.id ? 'winner': 'right'} 
-                onClick={() => saveGame(hamster1, hamster2, hamster2, winner, setWinner, setHamster1, setHamster2)}>
+                onClick={() => saveGame(hamster1, hamster2, hamster2, winner, setWinner, setHamster1, setHamster2, routeChange)}>
                 <PlayCard winner={winner !== null && winner.id === hamster2.id} hamster={hamster2}/></div>)
     }
     return(
@@ -51,24 +57,25 @@ const createNewGame = (setToggleNewGame, toggleNewGame, setWinner) => {
     setWinner(null);
 }
 
-const saveGame = (hamster1, hamster2, winningHamster, winner, setWinner, setHamster1, setHamster2) => {
+const saveGame = (hamster1, hamster2, winningHamster, winner, setWinner, setHamster1, setHamster2, routeChange) => {
 
     if (winner === null) {
         let game = {
-            contestants : [hamster1, hamster2],
+            contestants:[hamster1,hamster2],
             winner: winningHamster
         }
         const requestOptions = {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json', 'authorization':'abc1234' },
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(game)
         };
         fetch('/api/games', requestOptions)
         .then(response => response.json())
         .then(data => {
-            setHamster1(data.contestants[0])
-            setHamster2(data.contestants[1])
-            setWinner(winningHamster) 
+            setHamster1(data.contestant1)
+            setHamster2(data.contestant2)
+            setWinner(winningHamster)
+            routeChange() 
         });  
     }            
 }

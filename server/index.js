@@ -22,8 +22,6 @@ app.use(express.json())
 
 app.use(express.static(__dirname + '/../build'));
 
-// app.use('/', express.static('public')) //-- to serve frontend
-
 app.use('/api/assets', express.static(__dirname + '/assets'))
 
 const chartsRoute = require('./routes/charts')
@@ -38,7 +36,7 @@ app.use('/api/hamsters', hamstersRoute)
 const statsRoute = require('./routes/stats')
 app.use('/api/stats', statsRoute)
 
-const port = process.env.PORT || 3003;
+const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
   console.log('Server up and running on ' + port)

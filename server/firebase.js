@@ -3,8 +3,8 @@ const admin = require("firebase-admin");
 
 admin.initializeApp({
   credential: admin.credential.cert({
-    "private_key": process.env.PRIVATE_KEY,
-    "client_email": process.env.FIREBASE_CLIENT_EMAIL,
+    "private_key": process.env.FIREBASE_PRIVATE_KEY,
+    "client_email": process.env.CLIENT_EMAIL,
     "project_id": process.env.PROJECT_ID
   }),
   databaseURL: "https://hamster-project.firebaseio.com"

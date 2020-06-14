@@ -3,7 +3,7 @@ import React from 'react';
 const ProfileCard = ({ hamster }) => {
 
     // får en hamster via props
-    const imgUrl = "http://localhost:3003/assets/";
+    const imgUrl = "/api/assets/";
 
     return (
         <div className="ProfileCard">

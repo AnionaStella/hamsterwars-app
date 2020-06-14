@@ -5,7 +5,7 @@ import ProfileCard from './ProfileCard'
 
 const TopBottom = ({ param }) => {
 
-    const url = 'http://localhost:3003/charts/';
+    const url = '/api/charts/';
     const [data, setData] = useState(null);  
 
     useEffect(() => {

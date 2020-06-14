@@ -3,7 +3,7 @@ import PlayCard from './PlayCard';
 // import styled from 'styled-components';
 
 const Play = () => {
-    const url = 'http://localhost:3003/hamsters/random';
+    const url = '/api/hamsters/random';
     const [hamster1, setHamster1] = useState(null); 
     const [hamster2, setHamster2] = useState(null);
     const [toggleNewGame, setToggleNewGame] = useState(false);

@@ -2,7 +2,7 @@ import React from 'react';
 
 const PlayCard = ({ hamster, winner }) => {
 
-    const imgUrl = "http://localhost:3003/assets/";
+    const imgUrl = "/api/assets/";
 
     return (
         <div className="PlayCard">

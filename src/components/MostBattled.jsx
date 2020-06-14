@@ -5,7 +5,7 @@ import ProfileCard from './ProfileCard'
 
 const MostBattled = () => {
 
-    const url = 'http://localhost:3003/stats/battled-most';
+    const url = '/api/stats/battled-most';
     const [hamster, setHamster] = useState(null);
 
     useEffect(() => {

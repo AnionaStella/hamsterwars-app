@@ -3,7 +3,7 @@ import ProfileCard from './ProfileCard';
 
 const HamsterList = () => {
 
-    const url = 'http://localhost:3003/hamsters';
+    const url = '/api/hamsters';
     const [data, setData] = useState(null);  
 
     useEffect(() => {

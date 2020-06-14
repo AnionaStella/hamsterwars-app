@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react';
 
 const AllGames = () =>{
 
-    const totalUrl = 'http://localhost:3003/stats/total';
-    const allUrl = 'http://localhost:3003/games'
+    const totalUrl = '/api/stats/total';
+    const allUrl = '/api/games'
     const [games, setGames] = useState(null);
     const [total, setTotal] = useState(null);
 

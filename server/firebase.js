@@ -1,6 +1,5 @@
 const admin = require("firebase-admin");
 
-// const serviceAccount = require("./serviceAccountKey.json");
 
 admin.initializeApp({
   credential: admin.credential.cert({
@@ -11,7 +10,6 @@ admin.initializeApp({
   databaseURL: "https://hamster-project.firebaseio.com"
 });
 
-// serviceAccount
 const auth = admin.auth();
 const db = admin.firestore();
 

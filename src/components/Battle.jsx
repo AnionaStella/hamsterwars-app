@@ -66,8 +66,7 @@ const Battle = () => {
             </div>
             <button onClick={() => createNewGame(setToggleNewGame, toggleNewGame, setWinner)}>New battle</button>
             <br/>
-            <Link to="/Matchup"> See results </Link>
-            <Matchup hamster1={hamster1} hamster2={hamster2}/>
+            <Link to={`/matchup/${hamster1.id}/${hamster2.id}`}> See results </Link>
         </div>
     )
 }

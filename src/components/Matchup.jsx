@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from 'react';
 
-function Matchup ({hamster1, hamster2}){
+function Matchup ({id1, id2}){
     const url = '/api/games/last/';
     const [battle, setBattle] = useState('');
     const imgUrl = '/api/assets/'
 
     useEffect(() => {
         async function fetchData() {
-            if(hamster1 && hamster2){
-                const resp = await fetch(url + hamster1.id + '/' + hamster2.id);
+            if(id1 && id2){
+                const resp = await fetch(url + id1 + '/' + id2);
                 const json = await resp.json();
                 setBattle(json);
             }
         }
         fetchData();
-    },[hamster1, hamster2]);
+    },[id1, id2]);
 
     let bataille;
     if(battle !== ''){

@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import { useHistory, useParams, Link } from "react-router-dom";
 import PlayCard from './PlayCard';
-import Matchup from './Matchup';
 
 
 // import styled from 'styled-components';
@@ -78,7 +77,7 @@ const createNewGame = (setToggleNewGame, toggleNewGame, setWinner) => {
     setWinner(null);
 }
 
-const saveGame = (hamster1, hamster2, winningHamster, winner, setWinner, setHamster1, setHamster2, routeChange) => {
+const saveGame = async (hamster1, hamster2, winningHamster, winner, setWinner, setHamster1, setHamster2, routeChange) => {
 
     if (winner === null) {
         let game = {
@@ -90,15 +89,13 @@ const saveGame = (hamster1, hamster2, winningHamster, winner, setWinner, setHams
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(game)
         };
-        fetch('/api/games', requestOptions)
-        .then(response => response.json())
-        .then(data => {
-            setHamster1(data.contestant1)
-            setHamster2(data.contestant2)
-            setWinner(winningHamster)
-            console.log('calling routechange')
-            routeChange() 
-        });  
+        const resp = await fetch('/api/games', requestOptions)
+        const json = await resp.json();
+        setHamster1(json.contestant1)
+        setHamster2(json.contestant2)
+        setWinner(winningHamster)
+        console.log('calling routechange')
+        routeChange()   
     }            
 }
 export default Battle;

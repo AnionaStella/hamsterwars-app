@@ -6,6 +6,7 @@ import AllGames from './components/AllGames';
 import Stats from './components/Stats';
 import NewHamster from './components/NewHamster';
 import Battle from './components/Battle';
+import Matchup from './components/Matchup';
 
 function App() {
   
@@ -31,6 +32,7 @@ function App() {
             <Route path="/addHamster"><NewHamster/></Route> 
             <Route path="/battle/:id1/:id2"><Battle/></Route>
             <Route path="/battle"><Battle/></Route>
+            <Route path="/matchup/:id1/:id2"><Matchup/></Route>
         </Switch>
       </main>
       <footer>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 
 function Matchup ({id1, id2}){
     const url = '/api/games/last/';
@@ -27,8 +28,16 @@ function Matchup ({id1, id2}){
             )
          }
 
+    let history = useHistory();
+    let routeChange = () => {
+        let path = `/allHamsters`;
+        console.log(path);
+        history.push(path);
+      }
     return(
         <div>
+            <h1>this is matchup</h1>
+            <button onClick={() => routeChange()}>all hamsters</button>
            {bataille}
         </div>
     )

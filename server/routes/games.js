@@ -11,7 +11,7 @@ const {
   router.post('/', (req, res) => {
     try {
       let game = {
-        timestamp: new Date().getMilliseconds(),
+        timestamp: new Date().getTime(),
         contestants: req.body.contestants,
         contestant1Id: req.body.contestants[0].id,
         contestant2Id: req.body.contestants[1].id,

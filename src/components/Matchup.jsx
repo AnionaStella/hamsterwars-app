@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 
 function Matchup (){
     const url = '/api/games/last/';
-    const [battle, setBattle] = useState('');
+    const [battle, setBattle] = useState(null);
     const imgUrl = '/api/assets/'
     let {id1, id2} = useParams();  
 
@@ -12,6 +12,7 @@ function Matchup (){
             if(id1 && id2){
                 const resp = await fetch(url + id1 + '/' + id2);
                 const json = await resp.json();
+                console.log(json);
                 setBattle(json);
             }
         }
@@ -19,9 +20,9 @@ function Matchup (){
     },[id1, id2]);
 
     let bataille;
-    if(battle !== ''){
+    if(battle){
       bataille = ( <> <h1>You have arrived at Matchup.</h1>
-            <h1>Results of the game: {battle.contestant1.name} vs. {battle.contestant2.name}</h1>
+            <h1>Results of the game: {battle.contestants[0].name} vs. {battle.contestants[1].name}</h1>
             <h1>Winner is {battle.winner.name}</h1>
             <img src={imgUrl + battle.winner.imgName} alt="profile-pic" className="profile-img"/>
             <p>{battle.winner.name} loves to {battle.winner.loves}</p>

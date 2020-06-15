@@ -14,7 +14,7 @@ if (process.env.NODE_ENV === 'production') {
     });
   }
 
-app.use(express.static(__dirname + '/../build'));
+// app.use(express.static(__dirname + '/../build'));
 
 app.use('/api/assets', express.static(__dirname + '/assets'))
 

@@ -96,6 +96,7 @@ const saveGame = (hamster1, hamster2, winningHamster, winner, setWinner, setHams
             setHamster1(data.contestant1)
             setHamster2(data.contestant2)
             setWinner(winningHamster)
+            console.log('calling routechange')
             routeChange() 
         });  
     }            

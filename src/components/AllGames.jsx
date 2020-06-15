@@ -18,10 +18,14 @@ const AllGames = () =>{
     let allGames;
     if (games !== null) {
          allGames = games.map(game => {
-             let date = new Date(game.timestamp).toLocaleDateString();
+             let date = new Date(game.timestamp);
+             let hour = date.getHours();
+             let minute = date.getMinutes();
+             let second = date.getSeconds(); 
+             let formattedDate = date.toLocaleDateString() + ' ' + hour +':' + minute + ':' + second;
              let key = game.timestamp._seconds + '_' + game.contestants[0].id + '_' + game.contestants[1].id;
              return (<div key={key}>
-                <h1>game at {date}</h1>
+                <h1>game at {formattedDate}</h1>
                 <p>{game.contestants[0].name} vs {game.contestants[1].name}</p>
                 <p>{game.winner.name} won</p>
             </div>

@@ -10,6 +10,7 @@ firebase.initializeApp({
   authDomain: "hamster-project.firebaseapp.com",
   projectId: "hamster-project"
 });
+// firebase.initializeApp()
 
 const db = firebase.firestore()
 

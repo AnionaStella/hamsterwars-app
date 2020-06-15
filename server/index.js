@@ -1,24 +1,10 @@
 const express = require('express')
 const app = express()
 // const authKey = require('./auth')
+const cors = require('cors')
+app.use(cors())
+app.options('*', cors())
 app.use(express.json())
-
-// let auth = (req, res, next) => {
-//   const apiKey = authKey
-//   if (req.method !== 'GET') {
-//     if (apiKey === req.headers['authorization']) {
-//       next()
-//     } else {
-//       res.status(403).send({
-//         msg: 'Incorrect key, update and try again'
-//       })
-//     }
-//   } else {
-//     next()
-//   }
-
-// }
-// app.use(auth)
 
 app.use(express.static(__dirname + '/../build'));
 

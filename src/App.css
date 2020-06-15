@@ -1,12 +1,12 @@
 .App-header {
-  background-color: #282c34;
-  /* min-height: 100vh; */
+  background-color: cadetblue;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 1em;
 }
 
 header nav a {
@@ -14,6 +14,7 @@ header nav a {
     padding: 1em 0.5em;
     border: 1px solid cadetblue;
     border-bottom: none;
+    text-decoration: none;
 }
 header nav a:active {
     background-color: white;
@@ -43,6 +44,7 @@ main {
     padding: 2em;
     justify-content: space-evenly;
     align-items: center;
+    
 }
 .PlayCard {
     display: block;
@@ -51,12 +53,13 @@ main {
     width: 30em;
     height: 30em;
     margin: 1em;
+    text-align: center;
 }
 .PlayCard img {
     max-width: 20em;
     max-height: 20em;
 }
-.Start {
+.Start .Play {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
@@ -65,16 +68,17 @@ main {
     align-items: center;
 }
 .Start button {
-    margin-left: 47%;
+    margin-left: 45%;
     font-size: large;
     border-radius: 20em;
     padding: 1em;
-    background-color: hotpink;
+    background-color: rgb(241, 68, 155);
     border: 2px outset pink;
     max-width: 10em;
+    color: white;
 }
 .Start .fight {
-    margin-left: 45%;
+    margin-left: 40%;
 }
 .hamsterList {
     margin: 0 auto;
@@ -109,4 +113,22 @@ main {
 .ProfileCard img {
     max-width: 15em;
     max-height: 15em;
+}
+.hamsterForm input{
+    margin: 1em;
+}
+.hamsterForm input.valid {
+    border: 1px solid #5BBE36;
+    border-radius: 2px;
+}
+.hamsterForm input.invalid {
+    border: 1px solid #DD2626;
+    border-radius: 2px;
+}
+.hamsterForm .error {
+    color: #DD2626;
+    position: absolute;
+}
+h1{
+    color: rgb(78, 126, 128);
 }

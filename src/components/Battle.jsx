@@ -1,10 +1,13 @@
 import React, {useEffect, useState} from 'react';
-import { useHistory } from "react-router-dom";
+import { useHistory, useParams, Link } from "react-router-dom";
 import PlayCard from './PlayCard';
+import Matchup from './Matchup';
+
+
 // import styled from 'styled-components';
 
-const Play = () => {
-    const url = '/api/hamsters/random';
+const Battle = () => {
+
     const [hamster1, setHamster1] = useState(null); 
     const [hamster2, setHamster2] = useState(null);
     const [toggleNewGame, setToggleNewGame] = useState(false);
@@ -12,32 +15,45 @@ const Play = () => {
     // let card = '🐹';
     let history = useHistory();
     let routeChange = () => {
-        let path = '/mostBattled';
+        let path = '/Matchup';
         history.push(path);
       }
+    let {id1, id2} = useParams();  
 
     useEffect(() => {
         async function fetchHamsters() {
-            let resp = await fetch(url);
+            const url = '/api/hamsters/';
+            let url1;
+            let url2;
+            if (id1 && id2) {
+                console.log('url id finns')
+                url1 = url + id1;
+                url2 = url + id2;
+            } else {
+                console.log('inga paramatrar')
+                url1 = url + 'random';
+                url2= url + 'random';
+            }
+            let resp = await fetch(url1);
             let json = await resp.json();
             setHamster1(json);
-            resp = await fetch(url);
+            resp = await fetch(url2);
             json = await resp.json();
             setHamster2(json);
         }
         fetchHamsters();
-    },[toggleNewGame]);
+    },[toggleNewGame, id1, id2]);
     
-    let randomHamster1;
-    let randomHamster2;
+    let battleHamster1;
+    let battleHamster2;
     
     if (hamster1 !== null) {
-        randomHamster1 = (<div className={winner !== null && winner.id === hamster1.id ? 'winner': 'left'} 
+        battleHamster1 = (<div className={winner !== null && winner.id === hamster1.id ? 'winner': 'left'} 
                 onClick={() => saveGame(hamster1, hamster2, hamster1, winner, setWinner, setHamster1, setHamster2, routeChange)}>
                 <PlayCard winner={winner !== null && winner.id === hamster1.id} hamster={hamster1}/></div>)
     }
     if (hamster2 !== null) {
-        randomHamster2 = (<div className={winner !== null && winner.id === hamster2.id ? 'winner': 'right'} 
+        battleHamster2 = (<div className={winner !== null && winner.id === hamster2.id ? 'winner': 'right'} 
                 onClick={() => saveGame(hamster1, hamster2, hamster2, winner, setWinner, setHamster1, setHamster2, routeChange)}>
                 <PlayCard winner={winner !== null && winner.id === hamster2.id} hamster={hamster2}/></div>)
     }
@@ -45,10 +61,13 @@ const Play = () => {
         <div className="Start">
             <h1 className="fight" >HamsterWars!</h1>
             <div  className="Play">
-            {randomHamster1}
-            {randomHamster2}
+                {battleHamster1}
+                {battleHamster2}
             </div>
-            <button onClick={() => createNewGame(setToggleNewGame, toggleNewGame, setWinner)}>New game</button>
+            <button onClick={() => createNewGame(setToggleNewGame, toggleNewGame, setWinner)}>New battle</button>
+            <br/>
+            <Link to="/Matchup"> See results </Link>
+            <Matchup hamster1={hamster1} hamster2={hamster2}/>
         </div>
     )
 }
@@ -79,4 +98,4 @@ const saveGame = (hamster1, hamster2, winningHamster, winner, setWinner, setHams
         });  
     }            
 }
-export default Play;
+export default Battle;

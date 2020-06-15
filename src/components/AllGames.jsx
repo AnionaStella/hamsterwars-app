@@ -3,24 +3,14 @@ import React, { useState, useEffect } from 'react';
 
 const AllGames = () =>{
 
-    const totalUrl = '/api/stats/total';
     const allUrl = '/api/games'
     const [games, setGames] = useState(null);
-    const [total, setTotal] = useState(null);
 
     useEffect(() => {
         async function fetchData() {
             const resp = await fetch(allUrl);
             const json = await resp.json();
             setGames(json);
-        }
-        fetchData();
-    },[]);
-    useEffect(() => {
-        async function fetchData() {
-            const resp = await fetch(totalUrl);
-            const json = await resp.json();
-            setTotal(json);
         }
         fetchData();
     },[]);
@@ -41,7 +31,6 @@ const AllGames = () =>{
 
     return(
         <div>
-            {total !== null ? <> <h1>Total amount of games: {total.totalGames}</h1> </>: ''}
             <h1>All games played: </h1>
             <ul>
                 {allGames}

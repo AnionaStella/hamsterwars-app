@@ -2,7 +2,6 @@ const {
   Router
 } = require('express')
 const {
-  auth,
   db
 } = require('../firebase')
 
@@ -42,33 +41,37 @@ router.get('/:id', async (req, res) => {
     res.status(500)
     console.error(err)
   }
+
+  router.post('/', async (req,res) => {
+
+    // hämta hamsters.length och använd för att lägga id till ny hamster?
+    let hamsters = getHamsterArray(await db.collection('hamsters').get())
+    let id = hamsters.length + 1;
+
+    try {
+        let hamster = {
+            id: id,
+            age: req.body.age,
+            name: req.body.name,
+            imgName: req.body.imgName,    
+            favFood: req.body.favFood,
+            loves: req.body.loves,
+            wins: req.body.wins,
+            defeats: req.body.defeats,
+            games: req.body.games
+        }
+        await db.collection('hamsters').doc('' + hamster.id).set(hamster)
+        res.status(201).send({
+            hamster
+      })
+    } catch (err) {
+        console.error(err)
+        res.status(500).send('Oops, something went wrong. New hamster was not posted.')
+      }
+
+  })
 })
 
-
-// result update for hamsters, now moved to games POST
-
-// router.put('/:id/result', async (req, res) => {
-//   try {
-//     let hamsterRef = await db.collection('hamsters').doc(req.params.id).get()
-//     let hamster = hamsterRef.data();
-
-//     if (req.body.won) {
-//       hamster.wins += 1
-//     } else {
-//       hamster.defeats += 1
-//     }
-//     hamster.games += 1
-
-//     db.collection('hamsters').doc(req.params.id).set(hamster)
-//       .then(res.status(200).send(hamster))
-//       .catch(err => {
-//         throw err
-//       })
-//   } catch (err) {
-//     console.error(err)
-//     res.status(500).send(err)
-//   }
-// })
 
 
 module.exports = router;

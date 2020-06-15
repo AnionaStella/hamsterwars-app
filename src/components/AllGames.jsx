@@ -19,9 +19,9 @@ const AllGames = () =>{
     if (games !== null) {
          allGames = games.map(game => {
              let date = new Date(game.timestamp);
-             let hour = date.getHours();
-             let minute = date.getMinutes();
-             let second = date.getSeconds(); 
+             let hour = padZero(date.getHours());
+             let minute = padZero(date.getMinutes());
+             let second = padZero(date.getSeconds()); 
              let formattedDate = date.toLocaleDateString() + ' ' + hour +':' + minute + ':' + second;
              let key = game.timestamp._seconds + '_' + game.contestants[0].id + '_' + game.contestants[1].id;
              return (<div key={key}>
@@ -41,5 +41,15 @@ const AllGames = () =>{
             </ul>
         </div>
     )
+}
+function padZero(number) {
+
+    if(number < 10){
+        return '0' + number
+    }
+    else{
+        return number
+    }
+
 }
 export default AllGames;

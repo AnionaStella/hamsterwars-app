@@ -10,7 +10,6 @@ const Battle = () => {
     const [hamster1, setHamster1] = useState(null); 
     const [hamster2, setHamster2] = useState(null);
     const [toggleNewGame, setToggleNewGame] = useState(false);
-    const [winner, setWinner] = useState(null);
     // let card = '🐹';
     let history = useHistory();
     let routeChange = () => {
@@ -50,14 +49,12 @@ const Battle = () => {
     let battleHamster2;
     
     if (hamster1 !== null) {
-        battleHamster1 = (<div className={winner !== null && winner.id === hamster1.id ? 'winner': 'left'} 
-                onClick={() => saveGame(hamster1, hamster2, hamster1, winner, setWinner, setHamster1, setHamster2, routeChange)}>
-                <PlayCard winner={winner !== null && winner.id === hamster1.id} hamster={hamster1}/></div>)
+        battleHamster1 = (<div onClick={() => saveGame(hamster1, hamster2, hamster1, routeChange)}>
+                <PlayCard hamster={hamster1}/></div>)
     }
     if (hamster2 !== null) {
-        battleHamster2 = (<div className={winner !== null && winner.id === hamster2.id ? 'winner': 'right'} 
-                onClick={() => saveGame(hamster1, hamster2, hamster2, winner, setWinner, setHamster1, setHamster2, routeChange)}>
-                <PlayCard winner={winner !== null && winner.id === hamster2.id} hamster={hamster2}/></div>)
+        battleHamster2 = (<div onClick={() => saveGame(hamster1, hamster2, hamster2, routeChange)}>
+                <PlayCard hamster={hamster2}/></div>)
     }
     return(
         <div className="Start">
@@ -66,36 +63,29 @@ const Battle = () => {
                 {battleHamster1}
                 {battleHamster2}
             </div>
-            <button onClick={() => createNewGame(setToggleNewGame, toggleNewGame, setWinner)}>New battle</button>
+            <button onClick={() => createNewGame(setToggleNewGame, toggleNewGame)}>New battle</button>
             <br/>
         </div>
     )
 }
-const createNewGame = (setToggleNewGame, toggleNewGame, setWinner) => {
+const createNewGame = (setToggleNewGame, toggleNewGame) => {
     setToggleNewGame(!toggleNewGame);
-    setWinner(null);
 }
 
-const saveGame = async (hamster1, hamster2, winningHamster, winner, setWinner, setHamster1, setHamster2, routeChange) => {
+const saveGame = async (hamster1, hamster2, winningHamster, routeChange) => {
 
-    if (winner === null) {
-        let game = {
-            contestants:[hamster1,hamster2],
-            winner: winningHamster
-        }
-        const requestOptions = {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(game)
-        };
-        const resp = await fetch('/api/games', requestOptions)
-        const json = await resp.json();
-        console.log(json)
-        setHamster1(json.contestants[0])
-        setHamster2(json.contestants[1])
-        setWinner(winningHamster)
-        console.log('calling routechange')
-        routeChange()   
-    }            
+    let game = {
+        contestants:[hamster1,hamster2],
+        winner: winningHamster
+    }
+    const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(game)
+    };
+    const resp = await fetch('/api/games', requestOptions)
+    await resp.json();
+    routeChange()   
+               
 }
 export default Battle;

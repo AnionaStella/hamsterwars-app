@@ -91,6 +91,7 @@ const saveGame = async (hamster1, hamster2, winningHamster, winner, setWinner, s
         };
         const resp = await fetch('/api/games', requestOptions)
         const json = await resp.json();
+        console.log(json)
         setHamster1(json.contestant1)
         setHamster2(json.contestant2)
         setWinner(winningHamster)

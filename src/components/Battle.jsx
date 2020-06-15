@@ -15,9 +15,12 @@ const Battle = () => {
     // let card = '🐹';
     let history = useHistory();
     let routeChange = () => {
-        let path = '/Matchup';
+        let path = `/matchup/${hamster1.id}/${hamster2.id}`;
+        console.log(path);
         history.push(path);
       }
+    
+
     let {id1, id2} = useParams();  
 
     useEffect(() => {

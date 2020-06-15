@@ -56,9 +56,9 @@ router.get('/:id', async (req, res) => {
             imgName: req.body.imgName,    
             favFood: req.body.favFood,
             loves: req.body.loves,
-            wins: req.body.wins,
-            defeats: req.body.defeats,
-            games: req.body.games
+            wins: 0,
+            defeats: 0,
+            games: 0
         }
         await db.collection('hamsters').doc('' + hamster.id).set(hamster)
         res.status(201).send({

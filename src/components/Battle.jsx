@@ -57,7 +57,7 @@ const Battle = () => {
                 <PlayCard hamster={hamster2}/></div>)
     }
     return(
-        <div className="Start">
+        <div className="Battle">
             <h1 className="fight" >HamsterWars!</h1>
             <div  className="Play">
                 {battleHamster1}

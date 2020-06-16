@@ -57,7 +57,7 @@ function Stats (){
     )}
 
     return (
-        <div className="hamsterlist">
+        <div className="Stats">
             
             <h1>Total amount of battles: {total !== null ? total.totalGames : ''} </h1>
             <h1>Best hamsters</h1>

@@ -23,9 +23,9 @@ const HamsterList = () => {
     )}
 
     return (
-        <div className="hamsterList">
+        <div>
             <h1 className="allHamsters">this is all hamsters</h1>
-            {allHamsters}
+            <div className="hamsterList">{allHamsters}</div>
         </div>
     )
 }

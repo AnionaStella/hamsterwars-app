@@ -41,8 +41,9 @@ router.get('/:id', async (req, res) => {
     res.status(500)
     console.error(err)
   }
+})
 
-  router.post('/', async (req,res) => {
+router.post('/', async (req,res) => {
 
     console.log('received body: ' + req.body)
     // hämta hamsters.length och använd för att lägga id till ny hamster?
@@ -69,9 +70,7 @@ router.get('/:id', async (req, res) => {
         console.error(err)
         res.status(500).send('Oops, something went wrong. New hamster was not posted.')
       }
-
-  })
-})
+ })
 
 
 

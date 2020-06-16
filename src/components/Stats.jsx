@@ -57,21 +57,21 @@ function Stats (){
     )}
 
     return (
-        <div>
+        <div className="Stats">
             <h1>Total amount of battles: {total !== null ? total.totalGames : ''} </h1>
             <h1>Best hamsters</h1>
-            <div className="Stats"> 
+            <div className="Stats-grid"> 
             <ol>
                 {bestHamsters}
             </ol>
             </div>
             <h1>Worst hamsters</h1>
-            <div className="Stats">
+            <div className="Stats-grid">
             <ol>
                 {worstHamsters}
             </ol>
             </div>
-            <div className="Stats">
+            <div className="Stats-grid">
             <MostBattled></MostBattled>
             </div>
         </div> 

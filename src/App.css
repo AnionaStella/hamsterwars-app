@@ -154,7 +154,7 @@ main {
 .Stats h1{
     color: rgb(78, 126, 128);
 }
-.Stats {
+.Stats-grid {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;

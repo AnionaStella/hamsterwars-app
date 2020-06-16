@@ -51,7 +51,7 @@ function Stats (){
     if (worstData !== null) {
          worstHamsters = worstData.map(hamster => {
             return (
-            <li key={hamster.id} ><ProfileCard hamster={hamster}/></li>
+            <div key={hamster.id}><ProfileCard hamster={hamster}/></div>
             );
          }
     )}
@@ -61,18 +61,14 @@ function Stats (){
             <h1>Total amount of battles: {total !== null ? total.totalGames : ''} </h1>
             <h1>Best hamsters</h1>
             <div className="Stats-grid"> 
-            <ol>
-                {bestHamsters}
-            </ol>
+                    {bestHamsters}
             </div>
             <h1>Worst hamsters</h1>
             <div className="Stats-grid">
-            <ol>
-                {worstHamsters}
-            </ol>
+                    {worstHamsters}
             </div>
             <div className="Stats-grid">
-            <MostBattled></MostBattled>
+                <MostBattled></MostBattled>
             </div>
         </div> 
     )

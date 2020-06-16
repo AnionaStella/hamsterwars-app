@@ -89,14 +89,14 @@ function NewHamster (){
 
 }
 function isValidString(value) {
-    if( String(value) !== '' ) {
+    if( String(value).length > 0) {
         return ['valid', ''];
     } else {
         return ['invalid', 'Please enter a value using letters A-Z']
     }
 }
 function isValidNumber(value) {
-    if( String(value) !== '' ) {
+    if( Number(value) > 0) {
         return ['valid', ''];
     } else {
         return ['invalid', 'Please enter a number']

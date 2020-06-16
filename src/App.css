@@ -160,3 +160,13 @@ main {
     justify-content: space-evenly;
     align-items: center;
 }
+.games-table{
+    padding: 1em;
+    border: 2px solid cadetblue;
+}
+.games-table th{
+    font-size: medium;
+}
+.games-table tr{
+    font-size: small;
+}

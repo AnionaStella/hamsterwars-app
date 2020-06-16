@@ -59,11 +59,11 @@ function Stats (){
     return (
         <div className="Stats">
             <h1>Total amount of battles: {total !== null ? total.totalGames : ''} </h1>
-            <h1>Best hamsters</h1>
+            <h1>Hamsters with most wins</h1>
             <div className="Stats-grid"> 
                     {bestHamsters}
             </div>
-            <h1>Worst hamsters</h1>
+            <h1>Hamsters with most defeats</h1>
             <div className="Stats-grid">
                     {worstHamsters}
             </div>

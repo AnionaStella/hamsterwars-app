@@ -24,11 +24,18 @@ const AllGames = () =>{
              let second = padZero(date.getSeconds()); 
              let formattedDate = date.toLocaleDateString() + ' ' + hour +':' + minute + ':' + second;
              let key = game.timestamp._seconds + '_' + game.contestants[0].id + '_' + game.contestants[1].id;
-             return (<div key={key}>
-                <h1>game at {formattedDate}</h1>
-                <p>{game.contestants[0].name} vs {game.contestants[1].name}</p>
-                <p>{game.winner.name} won</p>
-            </div>
+             return (
+                <tr key={key}>
+                    <td>
+                        {formattedDate}
+                    </td>
+                    <td>
+                        {game.contestants[0].name} vs {game.contestants[1].name}
+                    </td>
+                    <td>
+                        {game.winner.name}
+                    </td>
+                </tr>
            );
          }      
     )};
@@ -36,9 +43,14 @@ const AllGames = () =>{
     return(
         <div>
             <h1>All games played: </h1>
-            <ul>
+            <table>
+                <thead>
+                    <th>Date</th>
+                    <th>Contestants</th>
+                    <th>Winner</th>
+                </thead>
                 {allGames}
-            </ul>
+            </table>
         </div>
     )
 }

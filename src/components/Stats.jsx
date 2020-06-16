@@ -40,18 +40,18 @@ function Stats (){
 
     let bestHamsters;
     if (bestData !== null) {
-         bestHamsters = bestData.map(hamster => {
+         bestHamsters = bestData.map((hamster, counter) => {
             return (
-            <li key={hamster.id} ><ProfileCard hamster={hamster}/></li>
+            <div key={hamster.id}>{counter + 1 }. <ProfileCard hamster={hamster}/></div>
             );
          }
     )}
     
     let worstHamsters;
     if (worstData !== null) {
-         worstHamsters = worstData.map(hamster => {
+         worstHamsters = worstData.map((hamster, counter) => {
             return (
-            <div key={hamster.id}><ProfileCard hamster={hamster}/></div>
+            <div key={hamster.id}>{counter + 1 }. <ProfileCard hamster={hamster}/></div>
             );
          }
     )}

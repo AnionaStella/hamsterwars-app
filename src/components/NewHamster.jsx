@@ -7,20 +7,28 @@ function NewHamster (){
     const [loves, setLoves] = useState('');
     const [img, setImg] = useState('');
 
-    const [stringTouched, setStringTouched] = useState('');
-    const [numberTouched, setNumberTouched] = useState('');
+    const [nameTouched, setNameTouched] = useState('');
+    const [foodTouched, setFoodTouched] = useState('');
+    const [ageTouched, setAgeTouched] = useState('');
+    const [lovesTouched, setLovesTouched] = useState('');
     const [imgTouched, setImgTouched] = useState('');
 
 
     const stopSubmit = event => {
         event.preventDefault();
     }
-
-    let [stringClass, stringError] = stringTouched
-        ? isValidString(stringTouched)
+    
+    let [nameClass, nameError] = nameTouched
+        ? isValidString(nameTouched)
         : ['', ''];
-    let [numberClass, numberError] = numberTouched
-        ? isValidNumber(numberTouched)
+    let [foodClass, foodError] = foodTouched
+        ? isValidString(foodTouched)
+        : ['', ''];
+    let [lovesClass, lovesError] = lovesTouched
+        ? isValidString(lovesTouched)
+        : ['', ''];
+    let [ageClass, ageError] = ageTouched
+        ? isValidNumber(ageTouched)
         : ['', ''];
     let [imgClass, imgError] = imgTouched
         ? isValidImg(imgTouched)
@@ -34,37 +42,37 @@ function NewHamster (){
             <div>
                 <label>Name: </label>
                 <input type="text" placeholder="Name"
-                    className={stringClass}
+                    className={nameClass}
                     onChange={e => setName(e.target.value)}
-                    onBlur={() => setStringTouched(name)}/>
-                <div className="error">{stringError}</div>
+                    onBlur={() => setNameTouched(name)}/>
+                <div className="error">{nameError}</div>
             </div>
             <br/>
             <div>
                 <label>Age: </label>
                 <input type="number" placeholder="Age"
-                    className={numberClass}
+                    className={ageClass}
                     onChange={e => setAge(e.target.value)}
-                    onBlur={() => setNumberTouched(age)}/>
-                   <div className="error">{numberError}</div>
+                    onBlur={() => setAgeTouched(age)}/>
+                   <div className="error">{ageError}</div>
             </div> 
             <br/>
             <div>
                 <label>Favorite food: </label>
                 <input type="text" placeholder="Enter food"
-                    className={stringClass}
+                    className={foodClass}
                     onChange={e => setFood(e.target.value)}
-                    onBlur={() => setStringTouched(food)}/>
-                <div className="error">{stringError}</div>
+                    onBlur={() => setFoodTouched(food)}/>
+                <div className="error">{foodError}</div>
             </div>
             <br/>
             <div>
                 <label>Loves:</label>
                 <input type="text" placeholder="Hobby or thing"
-                    className={stringClass}
+                    className={lovesClass}
                     onChange={e => setLoves(e.target.value)}
-                    onBlur={() => setStringTouched(loves)}/>
-                <div className="error">{stringError}</div>
+                    onBlur={() => setLovesTouched(loves)}/>
+                <div className="error">{lovesError}</div>
             </div>      
             <br/>
             <div>
@@ -95,10 +103,10 @@ function isValidNumber(value) {
     }
 }
 function isValidImg(img) {
-    if( String(img) !== '' ) {
+    if( img.includes('jpeg || jpg || png') ) {
         return ['valid', ''];
     } else {
-        return ['invalid', 'Please enter a title']
+        return ['invalid', 'File format must be  jpg, png or jpeg ']
     }
 }
 

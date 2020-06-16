@@ -114,7 +114,7 @@ function isValidString(value) {
     if( String(value).length > 0) {
         return ['valid', ''];
     } else {
-        return ['invalid', 'Please enter a value using letters A-Z']
+        return ['invalid', 'Please enter a value']
     }
 }
 function isValidNumber(value) {

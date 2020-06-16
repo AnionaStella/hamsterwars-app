@@ -165,8 +165,12 @@ main {
     border: 2px solid cadetblue;
 }
 .games-table th{
-    font-size: medium;
+    font-size: large;
 }
 .games-table tr{
-    font-size: small;
+    font-size: medium;
+    border: 2px solid cadetblue;
+}
+.games-table td{
+    border: 2px solid cadetblue;
 }

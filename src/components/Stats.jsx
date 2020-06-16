@@ -64,10 +64,14 @@ function Stats (){
             <ol>
                 {bestHamsters}
             </ol>
+            </div>
             <h1>Worst hamsters</h1>
+            <div className="Stats">
             <ol>
                 {worstHamsters}
             </ol>
+            </div>
+            <div className="Stats">
             <MostBattled></MostBattled>
             </div>
         </div> 

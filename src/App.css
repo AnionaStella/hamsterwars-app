@@ -109,6 +109,7 @@ main {
     width: 25em;
     height: 35em;
     margin: 1em;
+    box-sizing: border-box;
 }
 .ProfileCard p {
     font-size: small;

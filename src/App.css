@@ -104,7 +104,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    border: 2px solid hotpink;
+    border: 2px solid cadetblue;
     padding: 1em;
     width: 20rem;
     height: 30rem;
@@ -156,8 +156,8 @@ main {
 }
 .Stats-grid {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     padding: 2em;
     justify-content: space-evenly;
     align-items: center;

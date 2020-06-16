@@ -84,7 +84,7 @@ function NewHamster (){
                     onBlur={() => setImgTouched(img)}/>
                 <div className="error">{imgError}</div>
                 </div>
-                <button onClick={() => saveHamster(name, age, food, loves, img, setNewHamster)}>Save hamster</button>
+                <button onClick={() => saveHamster(name, age, food, loves, setNewHamster)}>Save hamster</button>
             </form>
             <h1>{ newHamster ? newHamster + 'was added' : '' }</h1>
         </div>
@@ -92,21 +92,22 @@ function NewHamster (){
 
 }
 
-async function saveHamster (name, age, food, loves, img, setNewHamster){
+async function saveHamster (name, age, food, loves, setNewHamster){
     let hamster = {
             name: name,
             age: age,   
             favFood: food,
-            loves: loves,
-            imgName: img 
+            loves: loves 
     }
     const requestOptions = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(hamster)
     };
+    console.log('before fetch')
     const resp = await fetch('/api/hamsters', requestOptions)
     let savedHamster = await resp.json();
+    console.log(savedHamster);
     setNewHamster(savedHamster.name)
 }
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PlayCard = ({ hamster, winner }) => {
+const PlayCard = ({ hamster }) => {
 
     const imgUrl = "/api/assets/";
 
@@ -10,7 +10,6 @@ const PlayCard = ({ hamster, winner }) => {
             <h1>{hamster.name} </h1>
             <p>age: {hamster.age}</p>
             <p>favorite food: {hamster.favFood}</p>
-            {winner ? <> <p>{hamster.name} has won {hamster.wins} times </p> </> : '' }
         </div>
     );
 }

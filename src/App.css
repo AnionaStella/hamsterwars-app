@@ -55,7 +55,7 @@ main {
 }
 .PlayCard {
     display: block;
-    border: 2px solid hotpink;
+    border: 2px solid cadetblue;
     padding: 1em;
     width: 30em;
     height: 30em;
@@ -63,6 +63,7 @@ main {
     text-align: center;
 }
 .PlayCard img {
+    border-radius: 25%;
     max-width: 20em;
     max-height: 20em;
 }

@@ -109,8 +109,8 @@ main {
     justify-content: space-evenly;
     align-items: center;
 }
-.hamsterList .allHamsters {
-    padding-left: 3em;
+.allHamsters {
+    padding-left: 3rem;
     color: cadetblue;
 }
 .ProfileCard {
@@ -125,12 +125,11 @@ main {
     margin: 1em;
     box-sizing: border-box; */
     display: block;
-    margin: 0 auto;
+    margin: 1em;
     border: 2px solid cadetblue;
     padding: 1em;
     width: 20rem;
-    height: 30rem;
-    margin-bottom: 1em;
+    height: 25rem;
     text-align: center;
 
 }
@@ -170,6 +169,9 @@ main {
 
 
 /* css för startpage */
+.Start{
+    margin: 0 auto;
+}
 .Start h1{
     color: rgb(78, 126, 128);
 }

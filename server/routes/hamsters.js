@@ -62,9 +62,7 @@ router.post('/', async (req,res) => {
             games: 0
         }
         await db.collection('hamsters').doc('' + hamster.id).set(hamster)
-        res.status(201).send({
-            hamster
-      })
+        res.status(201).send(hamster)
     } catch (err) {
         console.error(err)
         res.status(500).send('Oops, something went wrong. New hamster was not posted.')

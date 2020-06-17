@@ -85,7 +85,7 @@ function NewHamster () {
                 <br/>
                 <button disabled={ disableButton } onClick={() => saveHamster(name, age, food, loves, setNewHamster)}>Save hamster</button>
             </form>
-            <h1>{ newHamster ? newHamster + 'was added' : '' }</h1>
+            <p>{ newHamster ? newHamster + ' was added.' : '' }</p>
         </div>
     )
 

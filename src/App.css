@@ -9,12 +9,10 @@
   padding: 1em;
  
 }
-
 header nav a {
     color: white;
     padding: 1em 0.5em;
-    border: 1px solid cadetblue;
-    border-bottom: none;
+   
     text-decoration: none;
 }
 header nav a:active {
@@ -81,7 +79,6 @@ main {
     margin-left: 40%;
 }
 .hamsterList {
-    /* margin: 0 auto; */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     padding: 2em;
@@ -202,5 +199,32 @@ main {
     }
     .Play {
         margin: 0 auto;
+    }
+    .PlayCard {
+        display: block;
+        border: 2px solid cadetblue;
+        padding: 1em;
+        width: 15em;
+        height: 15em;
+        margin: 1em;
+        text-align: center;
+    }
+    .PlayCard img {
+        border-radius: 25%;
+        max-width: 10em;
+        max-height: 10em;
+    }
+    .ProfileCard {
+        display: block;
+        border: 2px solid cadetblue;
+        padding: 1em;
+        margin: 1em;
+        box-sizing: border-box;
+    }
+    header nav a {
+        color: white;
+        border: 1px solid cadetblue;
+        border-bottom: none;
+        text-decoration: none;
     }
 }

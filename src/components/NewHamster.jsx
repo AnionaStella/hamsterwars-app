@@ -30,6 +30,8 @@ function NewHamster () {
         ? isValidNumber(ageTouched)
         : ['', ''];
 
+    const disableButton = nameError || ageError || foodError || lovesError || name === '';    
+
     
     return(
         <div className="hamsterForm">
@@ -74,7 +76,7 @@ function NewHamster () {
                     <div className="error">{lovesError}</div>
                 </div>      
                 <br/>
-                <button disabled={nameError || ageError || foodError || lovesError} onClick={() => saveHamster(name, age, food, loves, setNewHamster)}>Save hamster</button>
+                <button disabled={ disableButton } onClick={() => saveHamster(name, age, food, loves, setNewHamster)}>Save hamster</button>
             </form>
             <h1>{ newHamster ? newHamster + 'was added' : '' }</h1>
         </div>
@@ -102,7 +104,7 @@ async function saveHamster (name, age, food, loves, setNewHamster) {
 }
 
 function isValidString(value) {
-    if( String(value).length > 0 && String(value) !== ' ' && String(value) !== '') {
+    if( String(value).trim() !== '') {
         return ['valid', ''];
     } else {
         return ['invalid', 'Please enter a value']
@@ -110,10 +112,10 @@ function isValidString(value) {
 }
 
 function isValidNumber(value) {
-    if( Number(value) > 0 && Number(value) !== ' ' && Number(value) !== '') {
+    if( !isNaN(Number(value)) ) {
         return ['valid', ''];
     } else {
-        return ['invalid', 'Please enter a number larger 0']
+        return ['invalid', 'Please enter a number']
     }
 }
 

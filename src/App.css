@@ -93,6 +93,12 @@ main {
 
 .matchup{
     margin: 0 auto;
+    color:  rgb(78, 126, 128);
+}
+.matchup img{
+    border-radius: 25%;
+    max-width: 20rem;
+    max-height: 20rem;
 }
 
 /* css for hamster catalogue */
@@ -178,6 +184,9 @@ main {
 .Stats h1{
     color: rgb(78, 126, 128);
     margin-left: 40%;
+}
+.most-h1{
+    color: rgb(78, 126, 128);
 }
 .Stats-grid {
     display: grid;

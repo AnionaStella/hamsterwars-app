@@ -43,7 +43,7 @@ function NewHamster (){
             <form onSubmit={stopSubmit}>
                 <div>
                     <label>Name: </label>
-                    <input type="text" placeholder="Name"
+                    <input type="name" placeholder="Name"
                         className={nameClass}
                         onChange={e => setName(e.target.value)}
                         onBlur={() => setNameTouched(name)}/>

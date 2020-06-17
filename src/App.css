@@ -150,6 +150,7 @@ main {
 /* css for adding new hamster */
 .hamsterForm input{
     margin: 1em;
+    font-size: medium;
 }
 .hamsterForm input.valid {
     border: 1px solid #5BBE36;
@@ -166,11 +167,12 @@ main {
 .hamsterForm{
     margin-left: 35%;
     color: rgb(78, 126, 128);
+    font-size: large;
 }
 .hamsterForm button{
     font-size: medium;
     border-radius: 20em;
-    padding: 1em;
+    padding: 1em 0.5em;
     background-color: cadetblue;
     border: 2px outset darkcyan;
     max-width: 10em;
@@ -180,7 +182,7 @@ main {
 
 /* css för startpage */
 .Start{
-    margin: 0 auto;
+    margin-left: 20%;
 }
 .Start h1{
     color: rgb(78, 126, 128);
@@ -190,6 +192,16 @@ main {
 }
 .Start h3{
     color: rgb(78, 126, 128);
+}
+.Start a{
+    font-size: medium;
+    border-radius: 20em;
+    padding: 1em 0.5em;
+    background-color: cadetblue;
+    border: 2px outset darkcyan;
+    max-width: 10em;
+    color: white;
+
 }
 
 /* css for statistics */

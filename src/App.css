@@ -70,9 +70,10 @@ main {
     padding-left: 45%;
     padding-right: 45%;
 }
-.Battle p{
+.battle-p{
     color: rgb(78, 126, 128);
     font-size: medium;
+    margin-left: 45%;
 }
 .Battle button {
     margin-left: 45%;
@@ -164,13 +165,14 @@ main {
     justify-content: space-evenly;
     align-items: center;
 }
-.all-games h1{
+.all-games{
     margin-left: 40%;
-    color:  rgb(49, 79, 80);
+    color: cadetblue;
 }
 .games-table{
     padding: 1em;
     border: 2px solid cadetblue;
+    margin: 0 auto;
 }
 .games-table th{
     padding: 1em;
@@ -184,7 +186,7 @@ main {
 .games-table td{
     padding: 1em;
     border: 2px solid cadetblue;
-    color: rgb(78, 126, 128);
+    color: rgb(49, 79, 80);
 }
 @media (max-width: 500px) {
     main{

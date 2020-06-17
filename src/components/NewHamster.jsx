@@ -42,7 +42,7 @@ function NewHamster () {
     
     return(
         <div className="hamsterForm">
-            <form onSubmit={stopSubmit}>
+            <form onSubmit={() => stopSubmit()}>
                 <div>
                     <label>Name: </label>
                     <br/>

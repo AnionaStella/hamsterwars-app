@@ -18,7 +18,7 @@ function getHamsterArray(hamsterRef) {
 //get all hamsters
 router.get('/', async (req, res) => {
   try {
-    res.status(200).send(getHamsterArray(await db.collection('hamsters').get()))
+    res.status(200).send(getHamsterArray(await db.collection('hamsters').orderBy('id', 'asc').get()))
   } catch (err) {
     res.status(500)
     console.error(err)

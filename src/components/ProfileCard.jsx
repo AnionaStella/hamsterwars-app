@@ -8,7 +8,7 @@ const ProfileCard = ({ hamster }) => {
     return (
         <div className="ProfileCard">
             <img src={imgUrl + hamster.imgName} alt="profile-pic" className="profile-img"/>
-            <h1>{hamster.name} </h1>
+            <h1>{hamster.name} (id: {hamster.id}) </h1>
             <p>Age: {hamster.age}</p>
             <p>Favorite food: {hamster.favFood}</p>
             <p>Hobby: {hamster.loves}</p>

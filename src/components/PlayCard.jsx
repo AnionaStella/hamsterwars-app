@@ -7,9 +7,10 @@ const PlayCard = ({ hamster }) => {
     return (
         <div className="PlayCard">
             <img src={imgUrl + hamster.imgName} alt="profile-pic" className="profile-img"/>
-            <h1>{hamster.name} </h1>
-            <p>age: {hamster.age}</p>
-            <p>favorite food: {hamster.favFood}</p>
+            <h1> {hamster.name} </h1>
+            <p>Age: {hamster.age}</p>
+            <p>Favorite food: {hamster.favFood}</p>
+            <p>Loves: {hamster.loves}</p>
         </div>
     );
 }

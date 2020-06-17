@@ -67,13 +67,13 @@ main {
     color: rgb(78, 126, 128);
 }
 .battle-h1{
-    padding-left: 45%;
-    padding-right: 45%;
+    padding-left: 40%;
+    padding-right: 40%;
 }
 .battle-p{
     color: rgb(78, 126, 128);
     font-size: medium;
-    margin-left: 45%;
+    margin-left: 40%;
 }
 .Battle button {
     margin-left: 45%;
@@ -94,6 +94,7 @@ main {
 }
 .hamsterList .allHamsters {
     padding-left: 3em;
+    color: cadetblue;
 }
 .ProfileCard {
     /* display: flex;
@@ -158,6 +159,8 @@ main {
 }
 .Stats h1{
     color: rgb(78, 126, 128);
+    margin-left: 40%;
+    margin-right: 40%;
 }
 .Stats-grid {
     display: grid;

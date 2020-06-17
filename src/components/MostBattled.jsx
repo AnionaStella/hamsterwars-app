@@ -19,7 +19,7 @@ const MostBattled = () => {
     
     return (
         <div>
-            <h2>This hamster has had the most battles!</h2>
+            <h1>This hamster has had the most battles!</h1>
             {(hamster !== null) ? <> <div><ProfileCard hamster={hamster}/></div> </> : ''}
         </div>
     )

@@ -57,7 +57,7 @@ const {
   // get all games
   router.get('/', async (req, res) => {
     try {
-      let gameDocs = await db.collection('games').get()
+      let gameDocs = await db.collection('games').orderBy('timestamp', 'desc').get()
       let games = []
       gameDocs.forEach(doc => {
         games.push(doc.data())

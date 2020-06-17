@@ -9,12 +9,12 @@ const ProfileCard = ({ hamster }) => {
         <div className="ProfileCard">
             <img src={imgUrl + hamster.imgName} alt="profile-pic" className="profile-img"/>
             <h1>{hamster.name} </h1>
-            <p>age: {hamster.age}</p>
-            <p>favorite food: {hamster.favFood}</p>
-            <p>hobby:{hamster.loves}</p>
-            <p>wins: {hamster.wins} </p>
-            <p>defeats: {hamster.defeats}</p>
-            <p>total games played: {hamster.games}</p>
+            <p>Age: {hamster.age}</p>
+            <p>Favorite food: {hamster.favFood}</p>
+            <p>Hobby: {hamster.loves}</p>
+            <p>Wins: {hamster.wins} </p>
+            <p>Defeats: {hamster.defeats}</p>
+            <p>Total games played: {hamster.games}</p>
         </div>
     );
 }

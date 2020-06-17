@@ -92,7 +92,6 @@ main {
 /* css for matchresults */
 
 .matchup{
-    margin-left: 30%;
     color:  rgb(78, 126, 128);
     text-align: center;
 }
@@ -115,28 +114,17 @@ main {
     color: cadetblue;
 }
 .ProfileCard {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    border: 2px solid cadetblue;
-    padding: 1em;
-    width: 20rem;
-    height: 30rem;
-    margin: 1em;
-    box-sizing: border-box; */
     display: block;
     margin: 1em;
     border: 2px solid;
     border-color: cadetblue;
     padding: 1em;
     width: 20rem;
-    height: 25rem;
+    height: 30rem;
     text-align: center;
-
 }
 .ProfileCard p {
-    font-size: small;
+    font-size: medium;
 }
 .ProfileCard h1 {
     font-size: medium;

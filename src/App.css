@@ -7,7 +7,6 @@
   font-size: calc(10px + 2vmin);
   color: white;
   padding: 1em;
- 
 }
 header nav a {
     color: white;
@@ -28,6 +27,8 @@ header a{
 main {
     padding: 1em;
 }
+
+/* Playcard css */
 .PlayCard {
     display: block;
     border: 2px solid cadetblue;
@@ -48,6 +49,8 @@ main {
 .Playcard .right {
     flex-direction: row;
 }
+
+/* Css for battle */
 .Play {
     margin: 0 auto;
     display: flex;
@@ -85,6 +88,14 @@ main {
     max-width: 10em;
     color: white;
 }
+
+/* css for matchresults */
+
+.matchup{
+    margin: 0 auto;
+}
+
+/* css for hamster catalogue */
 .hamsterList {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -129,6 +140,8 @@ main {
     max-height: 12rem;
     border-radius: 25%;
 }
+
+/* css for adding new hamster */
 .hamsterForm input{
     margin: 1em;
 }
@@ -149,6 +162,8 @@ main {
     color: rgb(78, 126, 128);
 }
 
+
+/* css för startpage */
 .Start h1{
     color: rgb(78, 126, 128);
 }
@@ -158,6 +173,8 @@ main {
 .Start h3{
     color: rgb(78, 126, 128);
 }
+
+/* css for statistics */
 .Stats h1{
     color: rgb(78, 126, 128);
     margin-left: 40%;
@@ -170,6 +187,8 @@ main {
     justify-content: space-evenly;
     align-items: center;
 }
+
+/* css for all games table */
 .all-games{
     margin-left: 40%;
     color: cadetblue;
@@ -193,6 +212,8 @@ main {
     border: 2px solid cadetblue;
     color: rgb(49, 79, 80);
 }
+
+/* css for smaller screen */
 @media (max-width: 500px) {
     main{
         display: block;

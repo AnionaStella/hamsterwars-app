@@ -32,7 +32,7 @@ function Matchup (){
          }
 
     return(
-        <div>
+        <div className="matchup">
            {bataille}
         </div>
     )

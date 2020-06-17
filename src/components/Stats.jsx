@@ -67,7 +67,7 @@ function Stats (){
             <div className="Stats-grid">
                     {worstHamsters}
             </div>
-            <h1>This hamster has had the most battles!</h1>
+            <h2>This hamster has had the most battles!</h2>
             <div className="Stats-grid">
                 <MostBattled></MostBattled>
             </div>

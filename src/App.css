@@ -92,7 +92,7 @@ main {
 /* css for matchresults */
 
 .matchup{
-    margin: 0 auto;
+    margin-left: 35%;
     color:  rgb(78, 126, 128);
 }
 .matchup img{
@@ -185,8 +185,9 @@ main {
     color: rgb(78, 126, 128);
     margin-left: 40%;
 }
-.most-h1{
+.Stats h2{
     color: rgb(78, 126, 128);
+    margin-left: 3rem;
 }
 .Stats-grid {
     display: grid;

@@ -14,7 +14,6 @@ const Battle = () => {
     let history = useHistory();
     let routeChange = () => {
         let path = `/matchup/${hamster1.id}/${hamster2.id}`;
-        console.log(path);
         history.push(path);
       }
     
@@ -27,11 +26,9 @@ const Battle = () => {
             let url1;
             let url2;
             if (id1 && id2) {
-                console.log('url id finns')
                 url1 = url + id1;
                 url2 = url + id2;
             } else {
-                console.log('inga paramatrar')
                 url1 = url + 'random';
                 url2= url + 'random';
             }

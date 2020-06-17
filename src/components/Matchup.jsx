@@ -12,7 +12,6 @@ function Matchup () {
             if(id1 && id2){
                 const resp = await fetch(url + id1 + '/' + id2);
                 const json = await resp.json();
-                console.log(json);
                 setBattle(json);
             }
         }

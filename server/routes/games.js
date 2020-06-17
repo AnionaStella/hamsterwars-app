@@ -81,7 +81,7 @@ const {
             .get()
             .then(snapshot => {
                 if (snapshot.empty) {
-                    console.log('No matching documents.');
+                    console.log('No matching documents.')
                     return;
                 }  
                 snapshot.forEach(doc => {
@@ -89,13 +89,13 @@ const {
                 });
             })
             .catch(err => {
-                console.log('Error getting documents', err);
-            });
+                console.log('Error getting documents', err)
+            })
         } catch (err) {
           console.error(err)
           res.status(500).send('Something went wrong, could not find any games')
         }
-  
+
   })
   
   module.exports = router

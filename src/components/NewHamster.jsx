@@ -103,10 +103,8 @@ async function saveHamster (name, age, food, loves, setNewHamster) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(hamster)
     };
-    console.log('before fetch')
     const resp = await fetch('/api/hamsters', requestOptions)
     let savedHamster = await resp.json();
-    console.log(savedHamster);
     setNewHamster(savedHamster.name)
 }
 

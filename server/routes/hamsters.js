@@ -45,7 +45,6 @@ router.get('/:id', async (req, res) => {
 
 router.post('/', async (req,res) => {
 
-    console.log('received body: ' + req.body)
     // hämta hamsters.length och använd för att lägga id till ny hamster?
     let hamsters = getHamsterArray(await db.collection('hamsters').get())
     let id = hamsters.length + 1;

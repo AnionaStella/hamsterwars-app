@@ -43,6 +43,7 @@ function NewHamster (){
             <form onSubmit={stopSubmit}>
                 <div>
                     <label>Name: </label>
+                    <br/>
                     <input type="name" placeholder="Name"
                         className={nameClass}
                         onChange={e => setName(e.target.value)}
@@ -52,6 +53,7 @@ function NewHamster (){
                 <br/>
                 <div>
                     <label>Age: </label>
+                    <br/>
                     <input type="number" placeholder="Age"
                         className={ageClass}
                         onChange={e => setAge(e.target.value)}
@@ -61,6 +63,7 @@ function NewHamster (){
                 <br/>
                 <div>
                     <label>Favorite food: </label>
+                    <br/>
                     <input type="text" placeholder="Enter food"
                         className={foodClass}
                         onChange={e => setFood(e.target.value)}
@@ -70,6 +73,7 @@ function NewHamster (){
                 <br/>
                 <div>
                     <label>Loves:</label>
+                    <br/>
                     <input type="text" placeholder="Hobby or thing"
                         className={lovesClass}
                         onChange={e => setLoves(e.target.value)}

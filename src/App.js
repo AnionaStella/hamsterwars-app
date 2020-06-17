@@ -19,7 +19,7 @@ function App() {
         <nav>
             <NavLink to="/battle">Battle</NavLink>
             <NavLink to="/stats">Stats</NavLink>
-            <NavLink to="/addHamster">Add new hamster</NavLink>
+            <NavLink to="/upload">Add new hamster</NavLink>
             <NavLink to="/allHamsters">All hamsters</NavLink>
             <NavLink to="/games">All games</NavLink>
         </nav> 
@@ -29,7 +29,7 @@ function App() {
             <Route path="/stats"><Stats></Stats></Route>
             <Route path="/allHamsters"><HamsterList></HamsterList></Route>
             <Route path="/games"><AllGames></AllGames></Route>
-            <Route path="/addHamster"><NewHamster/></Route> 
+            <Route path="/upload"><NewHamster/></Route> 
             <Route path="/battle/:id1/:id2"><Battle/></Route>
             <Route path="/battle"><Battle/></Route>
             <Route path="/matchup/:id1/:id2"><Matchup/></Route>

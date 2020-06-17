@@ -197,8 +197,8 @@ main {
 }
 .Start a{
     font-size: medium;
-    border-radius: 20em;
-    padding: 1em 0.5em;
+    border-radius: 10em;
+    padding: 0.5em 1em ;
     background-color: cadetblue;
     border: 2px outset darkcyan;
     max-width: 10em;

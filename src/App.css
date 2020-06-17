@@ -92,8 +92,9 @@ main {
 /* css for matchresults */
 
 .matchup{
-    margin-left: 35%;
+    margin-left: 30%;
     color:  rgb(78, 126, 128);
+    text-align: center;
 }
 .matchup img{
     border-radius: 25%;
@@ -127,7 +128,7 @@ main {
     display: block;
     margin: 1em;
     border: 2px solid;
-    border-color: opacity 25% cadetblue;
+    border-color: cadetblue;
     padding: 1em;
     width: 20rem;
     height: 25rem;
@@ -172,11 +173,12 @@ main {
 .hamsterForm button{
     font-size: medium;
     border-radius: 20em;
-    padding: 1em 0.5em;
+    padding: 0.5em 1em;
     background-color: cadetblue;
     border: 2px outset darkcyan;
     max-width: 10em;
     color: white;
+    margin-left: 2em;
 }
 
 

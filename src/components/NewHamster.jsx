@@ -77,14 +77,14 @@ function NewHamster (){
                     <div className="error">{lovesError}</div>
                 </div>      
                 <br/>
-                <div>
+                {/* <div>
                 <label>Upload image: </label>
                 <input type="file" name="image" 
                     className={imgClass}
                     onChange={e => setImg(e.target.value)}
                     onBlur={() => setImgTouched(img)}/>
                 <div className="error">{imgError}</div>
-                </div>
+                </div> */}
                 <button onClick={() => saveHamster(name, age, food, loves, setNewHamster)}>Save hamster</button>
             </form>
             <h1>{ newHamster ? newHamster + 'was added' : '' }</h1>

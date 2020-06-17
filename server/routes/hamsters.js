@@ -55,7 +55,7 @@ router.post('/', async (req,res) => {
             id: id,
             age: req.body.age,
             name: req.body.name,
-            imgName: req.body.imgName ? req.body.imgName : '',    
+            imgName: req.body.imgName ? req.body.imgName : 'hamster_emoji.png',    
             favFood: req.body.favFood,
             loves: req.body.loves,
             wins: 0,

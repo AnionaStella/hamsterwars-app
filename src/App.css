@@ -94,6 +94,7 @@ main {
 .matchup {
     color:  rgb(78, 126, 128);
     text-align: center;
+
 }
 .matchup img {
     border-radius: 25%;
@@ -172,12 +173,15 @@ main {
 }
 .Start h1 {
     color: rgb(78, 126, 128);
+    padding: 1rem;
 }
 .Start h2 {
     color: rgb(78, 126, 128);
+    padding: 1rem;
 }
 .Start h3 {
     color: rgb(78, 126, 128);
+    padding: 1rem;
 }
 .Start a {
     font-size: medium;

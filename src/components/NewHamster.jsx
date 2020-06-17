@@ -6,14 +6,14 @@ function NewHamster (){
     const [age, setAge] = useState(0);
     const [food, setFood] = useState('');
     const [loves, setLoves] = useState('');
-    const [img, setImg] = useState('');
+    // const [img, setImg] = useState('');
     const [newHamster, setNewHamster] = useState('');
 
     const [nameTouched, setNameTouched] = useState('');
     const [foodTouched, setFoodTouched] = useState('');
     const [ageTouched, setAgeTouched] = useState('');
     const [lovesTouched, setLovesTouched] = useState('');
-    const [imgTouched, setImgTouched] = useState('');
+    // const [imgTouched, setImgTouched] = useState('');
 
 
     const stopSubmit = event => {
@@ -32,9 +32,9 @@ function NewHamster (){
     let [ageClass, ageError] = ageTouched
         ? isValidNumber(ageTouched)
         : ['', ''];
-    let [imgClass, imgError] = imgTouched
-        ? isValidImg(imgTouched)
-        : ['', ''];
+    // let [imgClass, imgError] = imgTouched
+    //     ? isValidImg(imgTouched)
+    //     : ['', ''];
     
     
 
@@ -89,7 +89,7 @@ function NewHamster (){
                     onBlur={() => setImgTouched(img)}/>
                 <div className="error">{imgError}</div>
                 </div> */}
-                <button disabled={nameError || ageError || foodError || lovesError}> onClick={() => saveHamster(name, age, food, loves, setNewHamster)}>Save hamster</button>
+                <button disabled={nameError || ageError || foodError || lovesError} onClick={() => saveHamster(name, age, food, loves, setNewHamster)}>Save hamster</button>
             </form>
             <h1>{ newHamster ? newHamster + 'was added' : '' }</h1>
         </div>
@@ -130,12 +130,12 @@ function isValidNumber(value) {
         return ['invalid', 'Please enter a number larger 0']
     }
 }
-function isValidImg(img) {
-    if( img.includes('jpeg || jpg || png') ) {
-        return ['valid', ''];
-    } else {
-        return ['invalid', 'File format must be  jpg, png or jpeg ']
-    }
-}
+// function isValidImg(img) {
+//     if( img.includes('jpeg || jpg || png') ) {
+//         return ['valid', ''];
+//     } else {
+//         return ['invalid', 'File format must be  jpg, png or jpeg ']
+//     }
+// }
 
 export default NewHamster;

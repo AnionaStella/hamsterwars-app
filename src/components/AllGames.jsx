@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
 
-const AllGames = () =>{
+const AllGames = () => {
 
-    const allUrl = '/api/games'
+    const allUrl = '/api/games';
     const [games, setGames] = useState(null);
 
     useEffect(() => {
@@ -37,8 +37,8 @@ const AllGames = () =>{
                     </td>
                 </tr>
            );
-         }      
-    )};
+         });
+    }
 
     return(
         <div>
@@ -56,7 +56,7 @@ const AllGames = () =>{
 }
 function padZero(number) {
 
-    if(number < 10){
+    if(number < 10) {
         return '0' + number
     }
     else{

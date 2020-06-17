@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
-function Matchup (){
+function Matchup () {
     const url = '/api/games/last/';
     const [battle, setBattle] = useState(null);
-    const imgUrl = '/api/assets/'
+    const imgUrl = '/api/assets/';
     let {id1, id2} = useParams();  
 
     useEffect(() => {
@@ -20,7 +20,7 @@ function Matchup (){
     },[id1, id2]);
 
     let bataille;
-    if(battle){
+    if(battle) {
       bataille = ( <> 
             <h1>Results of the game: {battle.contestants[0].name} vs. {battle.contestants[1].name}</h1>
             <h1>Winner is {battle.winner.name}</h1>
@@ -36,7 +36,6 @@ function Matchup (){
            {bataille}
         </div>
     )
-
 
 }
 export default Matchup;

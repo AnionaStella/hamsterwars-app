@@ -1,20 +1,17 @@
 import React, { useState } from 'react';
 
 
-function NewHamster (){
+function NewHamster () {
     const [name, setName] = useState('');
     const [age, setAge] = useState(null);
     const [food, setFood] = useState('');
     const [loves, setLoves] = useState('');
-    // const [img, setImg] = useState('');
     const [newHamster, setNewHamster] = useState('');
 
     const [nameTouched, setNameTouched] = useState('');
     const [foodTouched, setFoodTouched] = useState('');
     const [ageTouched, setAgeTouched] = useState('');
     const [lovesTouched, setLovesTouched] = useState('');
-    // const [imgTouched, setImgTouched] = useState('');
-
 
     const stopSubmit = event => {
         event.preventDefault();
@@ -32,12 +29,8 @@ function NewHamster (){
     let [ageClass, ageError] = ageTouched
         ? isValidNumber(ageTouched)
         : ['', ''];
-    // let [imgClass, imgError] = imgTouched
-    //     ? isValidImg(imgTouched)
-    //     : ['', ''];
-    
-    
 
+    
     return(
         <div className="hamsterForm">
             <form onSubmit={stopSubmit}>
@@ -81,14 +74,6 @@ function NewHamster (){
                     <div className="error">{lovesError}</div>
                 </div>      
                 <br/>
-                {/* <div>
-                <label>Upload image: </label>
-                <input type="file" name="image" 
-                    className={imgClass}
-                    onChange={e => setImg(e.target.value)}
-                    onBlur={() => setImgTouched(img)}/>
-                <div className="error">{imgError}</div>
-                </div> */}
                 <button disabled={nameError || ageError || foodError || lovesError} onClick={() => saveHamster(name, age, food, loves, setNewHamster)}>Save hamster</button>
             </form>
             <h1>{ newHamster ? newHamster + 'was added' : '' }</h1>
@@ -97,12 +82,12 @@ function NewHamster (){
 
 }
 
-async function saveHamster (name, age, food, loves, setNewHamster){
+async function saveHamster (name, age, food, loves, setNewHamster) {
     let hamster = {
-            name: name,
-            age: age,   
-            favFood: food,
-            loves: loves 
+        name: name,
+        age: age,   
+        favFood: food,
+        loves: loves 
     }
     const requestOptions = {
         method: 'POST',
@@ -123,6 +108,7 @@ function isValidString(value) {
         return ['invalid', 'Please enter a value']
     }
 }
+
 function isValidNumber(value) {
     if( Number(value) > 0 && Number(value) !== ' ' && Number(value) !== '') {
         return ['valid', ''];
@@ -130,12 +116,5 @@ function isValidNumber(value) {
         return ['invalid', 'Please enter a number larger 0']
     }
 }
-// function isValidImg(img) {
-//     if( img.includes('jpeg || jpg || png') ) {
-//         return ['valid', ''];
-//     } else {
-//         return ['invalid', 'File format must be  jpg, png or jpeg ']
-//     }
-// }
 
 export default NewHamster;

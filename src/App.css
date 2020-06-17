@@ -80,7 +80,7 @@ main {
 }
 .Battle button {
     margin-left: 45%;
-    font-size: large;
+    font-size: x-large;
     border-radius: 20em;
     padding: 1em;
     background-color: cadetblue;
@@ -94,8 +94,9 @@ main {
 .matchup {
     color:  rgb(78, 126, 128);
     text-align: center;
-
+    font-size: large;
 }
+
 .matchup img {
     border-radius: 25%;
     max-width: 20rem;
@@ -184,13 +185,14 @@ main {
     padding: 1rem;
 }
 .Start a {
-    font-size: medium;
+    font-size: x-large;
     border-radius: 10em;
     padding: 0.5em 1em ;
     background-color: cadetblue;
     border: 2px outset darkcyan;
     max-width: 10em;
     color: white;
+    margin-left: 30%;
 
 }
 

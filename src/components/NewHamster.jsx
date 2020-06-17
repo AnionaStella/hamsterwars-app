@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 function NewHamster (){
     const [name, setName] = useState('');
-    const [age, setAge] = useState(0);
+    const [age, setAge] = useState(null);
     const [food, setFood] = useState('');
     const [loves, setLoves] = useState('');
     // const [img, setImg] = useState('');

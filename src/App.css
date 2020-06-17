@@ -19,7 +19,7 @@ header nav a:active {
     border-bottom: none;
     color: cadetblue;
 }
-header a{
+header a {
     color: rgb(65, 106, 107);
     text-decoration: none;
 }
@@ -66,14 +66,14 @@ main {
     justify-content: center;
     align-items: center;
 }
-.Battle h1{
+.Battle h1 {
     color: rgb(78, 126, 128);
 }
-.battle-h1{
+.battle-h1 {
     padding-left: 40%;
     padding-right: 40%;
 }
-.battle-p{
+.battle-p {
     color: rgb(78, 126, 128);
     font-size: medium;
     margin-left: 40%;
@@ -91,11 +91,11 @@ main {
 
 /* css for matchresults */
 
-.matchup{
+.matchup {
     color:  rgb(78, 126, 128);
     text-align: center;
 }
-.matchup img{
+.matchup img {
     border-radius: 25%;
     max-width: 20rem;
     max-height: 20rem;
@@ -137,7 +137,7 @@ main {
 }
 
 /* css for adding new hamster */
-.hamsterForm input{
+.hamsterForm input {
     margin: 1em;
     font-size: medium;
 }
@@ -153,37 +153,33 @@ main {
     color: #DD2626;
     position: absolute;
 }
-.hamsterForm{
+.hamsterForm {
     margin-left: 35%;
     color: rgb(78, 126, 128);
     font-size: large;
 }
-.hamsterForm button{
+.hamsterForm button {
     font-size: medium;
     border-radius: 20em;
     padding: 0.5em 1em;
-    background-color: cadetblue;
-    border: 2px outset darkcyan;
     max-width: 10em;
-    color: white;
     margin-left: 2em;
 }
 
-
 /* css för startpage */
-.Start{
+.Start {
     margin-left: 20%;
 }
-.Start h1{
+.Start h1 {
     color: rgb(78, 126, 128);
 }
-.Start h2{
+.Start h2 {
     color: rgb(78, 126, 128);
 }
-.Start h3{
+.Start h3 {
     color: rgb(78, 126, 128);
 }
-.Start a{
+.Start a {
     font-size: medium;
     border-radius: 10em;
     padding: 0.5em 1em ;
@@ -195,11 +191,11 @@ main {
 }
 
 /* css for statistics */
-.Stats h1{
+.Stats h1 {
     color: rgb(78, 126, 128);
     margin-left: 40%;
 }
-.Stats h2{
+.Stats h2 {
     color: rgb(78, 126, 128);
     margin-left: 3rem;
 }
@@ -212,25 +208,25 @@ main {
 }
 
 /* css for all games table */
-.all-games{
+.all-games {
     margin-left: 40%;
     color: cadetblue;
 }
-.games-table{
+.games-table {
     padding: 1em;
     border: 2px solid cadetblue;
     margin: 0 auto;
 }
-.games-table th{
+.games-table th {
     padding: 1em 0;
     font-size: large;
     color: rgb(49, 79, 80);
 }
-.games-table tr{
+.games-table tr {
     font-size: medium;
     border: 2px solid cadetblue;
 }
-.games-table td{
+.games-table td {
     padding: 1em;
     color: rgb(49, 79, 80);
 }
@@ -247,10 +243,10 @@ main {
     .hamsterList .allHamsters {
         padding-left: 3em;
     }
-    .games-table th{
+    .games-table th {
         font-size: medium;
     }
-    .games-table tr{
+    .games-table tr {
         font-size: small;
         border: 2px solid cadetblue;
     }

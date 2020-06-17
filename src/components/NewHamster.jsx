@@ -13,9 +13,9 @@ function NewHamster () {
     const [ageTouched, setAgeTouched] = useState('');
     const [lovesTouched, setLovesTouched] = useState('');
 
-    const stopSubmit = event => {
-        event.preventDefault();
-    }
+    // const stopSubmit = event => {
+    //     event.preventDefault();
+    // }
     
     let [nameClass, nameError] = nameTouched
         ? isValidString(nameTouched)
@@ -42,7 +42,6 @@ function NewHamster () {
     
     return(
         <div className="hamsterForm">
-            <form onSubmit={() => stopSubmit()}>
                 <div>
                     <label>Name: </label>
                     <br/>
@@ -84,7 +83,6 @@ function NewHamster () {
                 </div>      
                 <br/>
                 <button disabled={ disableButton } onClick={() => saveHamster(name, age, food, loves, setNewHamster)}>Save hamster</button>
-            </form>
             <p>{ newHamster ? newHamster + ' was added.' : '' }</p>
         </div>
     )

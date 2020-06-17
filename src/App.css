@@ -66,8 +66,12 @@ main {
 .Battle h1{
     color: rgb(78, 126, 128);
 }
+.battle-h1{
+    padding-left: 45%;
+    padding-right: 45%;
+}
 .Battle p{
-    color: cadetblue;
+    color: rgb(78, 126, 128);
     font-size: medium;
 }
 .Battle button {
@@ -179,8 +183,8 @@ main {
 }
 .games-table td{
     padding: 1em;
-    border: 2px solid rgb(49, 79, 80);
-    color: cadetblue;
+    border: 2px solid cadetblue;
+    color: rgb(78, 126, 128;
 }
 @media (max-width: 500px) {
     main{

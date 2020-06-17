@@ -58,11 +58,11 @@ const Battle = () => {
     }
     return(
         <div className="Battle">
-            <h1>HamsterWars!</h1>
+            <h1 className="battle-h1">HamsterWars!</h1>
             <p>Click on the hamster you think should win!</p>
             <div  className="Play">
                 {battleHamster1}
-                <h1>VS</h1>
+                <h1 className="battle-h1">VS</h1>
                 {battleHamster2}
             </div>
             <p>If you can't decide, start a new game.</p>

@@ -27,23 +27,16 @@ header a{
     text-decoration: none;
 }
 
-
-
 main {
     padding: 1em;
 }
 
-.winner {
-    border: 5px solid green;
-
-}
 .PlayCard .left {
     flex-direction: row;
 }
 .Playcard .right {
     flex-direction: row;
 }
-
 .Play {
     margin: 0 auto;
     display: flex;
@@ -149,13 +142,12 @@ main {
 .Start h3{
     color: rgb(78, 126, 128);
 }
-
 .Stats h1{
     color: rgb(78, 126, 128);
 }
 .Stats-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     padding: 2em;
     justify-content: space-evenly;
     align-items: center;
@@ -173,4 +165,42 @@ main {
 }
 .games-table td{
     border: 2px solid cadetblue;
+}
+@media (max-width: 500px) {
+    main{
+        display: block;
+        margin: 1em;
+    }
+    .hamsterList {
+        display: block;
+    }
+    .hamsterList .allHamsters {
+        padding-left: 3em;
+    }
+    .games-table th{
+        font-size: medium;
+    }
+    .games-table tr{
+        font-size: small;
+        border: 2px solid cadetblue;
+    }
+    .Battle .Play {
+        display: block;
+    }
+    .Battle button {
+        margin-left: 30%;
+        font-size: larger;
+        border-radius: 20em;
+        padding: 1em;
+        background-color: cadetblue;
+        border: 2px outset darkcyan;
+        max-width: 20em;
+        color: white;
+    }
+    .Battle .fight {
+        margin-left: 20%;
+    }
+    .Play {
+        margin: 0 auto;
+    }
 }

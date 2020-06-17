@@ -184,7 +184,7 @@ main {
 .games-table td{
     padding: 1em;
     border: 2px solid cadetblue;
-    color: rgb(78, 126, 128;
+    color: rgb(78, 126, 128);
 }
 @media (max-width: 500px) {
     main{

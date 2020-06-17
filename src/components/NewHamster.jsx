@@ -113,14 +113,14 @@ async function saveHamster (name, age, food, loves, setNewHamster){
 }
 
 function isValidString(value) {
-    if( String(value).length > 0) {
+    if( String(value).length > 0 && String(value) !== '') {
         return ['valid', ''];
     } else {
         return ['invalid', 'Please enter a value']
     }
 }
 function isValidNumber(value) {
-    if( Number(value) > 0) {
+    if( Number(value) > 0 && Number(value) !== '') {
         return ['valid', ''];
     } else {
         return ['invalid', 'Please enter a number']

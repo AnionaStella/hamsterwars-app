@@ -178,7 +178,6 @@ main {
 .Stats h1{
     color: rgb(78, 126, 128);
     margin-left: 40%;
-    margin-right: 40%;
 }
 .Stats-grid {
     display: grid;
@@ -199,7 +198,7 @@ main {
     margin: 0 auto;
 }
 .games-table th{
-    padding: 1em;
+    padding: 1em 0;
     font-size: large;
     color: rgb(49, 79, 80);
 }
@@ -209,7 +208,6 @@ main {
 }
 .games-table td{
     padding: 1em;
-    border: 2px solid cadetblue;
     color: rgb(49, 79, 80);
 }
 
@@ -277,5 +275,8 @@ main {
         border: 1px solid cadetblue;
         border-bottom: none;
         text-decoration: none;
+    }
+    .Stats-grid {
+        display: block;
     }
 }

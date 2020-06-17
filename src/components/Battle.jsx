@@ -58,7 +58,7 @@ const Battle = () => {
     }
     return(
         <div className="Battle">
-            <h1 className="fight" >HamsterWars!</h1>
+            <h1>HamsterWars!</h1>
             <div  className="Play">
                 {battleHamster1}
                 {battleHamster2}

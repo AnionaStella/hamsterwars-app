@@ -66,6 +66,10 @@ main {
 .Battle h1{
     color: rgb(78, 126, 128);
 }
+.Battle p{
+    color: cadetblue;
+    font-size: medium;
+}
 .Battle button {
     margin-left: 45%;
     font-size: large;
@@ -103,6 +107,8 @@ main {
     padding: 1em;
     width: 20rem;
     height: 30rem;
+    margin-bottom: 1em;
+
 }
 .ProfileCard p {
     font-size: small;
@@ -131,6 +137,9 @@ main {
     color: #DD2626;
     position: absolute;
 }
+.hamsterForm{
+    margin: 0 auto;
+}
 
 .Start h1{
     color: rgb(78, 126, 128);
@@ -151,9 +160,9 @@ main {
     justify-content: space-evenly;
     align-items: center;
 }
-AllGames h1{
+.all-games h1{
     margin-left: 40%;
-    color: cadetblue;
+    color:  rgb(49, 79, 80;
 }
 .games-table{
     padding: 1em;
@@ -162,7 +171,7 @@ AllGames h1{
 .games-table th{
     padding: 1em;
     font-size: large;
-    color: cadetblue;
+    color: rgb(49, 79, 80);
 }
 .games-table tr{
     font-size: medium;
@@ -170,7 +179,7 @@ AllGames h1{
 }
 .games-table td{
     padding: 1em;
-    border: 2px solid cadetblue;
+    border: 2px solid rgb(49, 79, 80);
     color: cadetblue;
 }
 @media (max-width: 500px) {

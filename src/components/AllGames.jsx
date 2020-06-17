@@ -42,7 +42,7 @@ const AllGames = () =>{
 
     return(
         <div>
-            <h1>All games played: </h1>
+            <h1 className="all-games">All games played: </h1>
             <table className="games-table">
                 <thead>
                     <th>Date</th>

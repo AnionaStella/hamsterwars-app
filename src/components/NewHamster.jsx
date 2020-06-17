@@ -89,7 +89,7 @@ function NewHamster (){
                     onBlur={() => setImgTouched(img)}/>
                 <div className="error">{imgError}</div>
                 </div> */}
-                <button onClick={() => saveHamster(name, age, food, loves, setNewHamster)}>Save hamster</button>
+                <button disabled={nameError || ageError || foodError || lovesError}> onClick={() => saveHamster(name, age, food, loves, setNewHamster)}>Save hamster</button>
             </form>
             <h1>{ newHamster ? newHamster + 'was added' : '' }</h1>
         </div>

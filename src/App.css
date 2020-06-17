@@ -126,7 +126,8 @@ main {
     box-sizing: border-box; */
     display: block;
     margin: 1em;
-    border: 2px solid cadetblue;
+    border: 2px solid;
+    border-color: transparent cadetblue;
     padding: 1em;
     width: 20rem;
     height: 25rem;
@@ -165,6 +166,15 @@ main {
 .hamsterForm{
     margin-left: 35%;
     color: rgb(78, 126, 128);
+}
+.hamsterForm button{
+    font-size: medium;
+    border-radius: 20em;
+    padding: 1em;
+    background-color: cadetblue;
+    border: 2px outset darkcyan;
+    max-width: 10em;
+    color: white;
 }
 
 

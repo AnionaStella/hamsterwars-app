@@ -123,7 +123,7 @@ function isValidNumber(value) {
     if( Number(value) > 0 && Number(value) !== ' ') {
         return ['valid', ''];
     } else {
-        return ['invalid', 'Please enter a number']
+        return ['invalid', 'Please enter a number larger 0']
     }
 }
 function isValidImg(img) {

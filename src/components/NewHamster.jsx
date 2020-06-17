@@ -30,7 +30,14 @@ function NewHamster () {
         ? isValidNumber(ageTouched)
         : ['', ''];
 
-    const disableButton = nameError || ageError || foodError || lovesError || name === '';    
+    const disableButton = nameError || 
+        ageError || 
+        foodError || 
+        lovesError || 
+        name === '' || 
+        age === null ||
+        food === '' ||
+        loves === '';    
 
     
     return(

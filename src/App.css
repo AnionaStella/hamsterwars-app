@@ -65,7 +65,6 @@ main {
 }
 .Battle h1{
     color: rgb(78, 126, 128);
-    margin-left: 40%;
 }
 .Battle button {
     margin-left: 45%;
@@ -88,7 +87,7 @@ main {
     padding-left: 3em;
 }
 .ProfileCard {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
@@ -97,7 +96,13 @@ main {
     width: 20rem;
     height: 30rem;
     margin: 1em;
-    box-sizing: border-box;
+    box-sizing: border-box; */
+    display: block;
+    margin: 0 auto;
+    border: 2px solid cadetblue;
+    padding: 1em;
+    width: 20rem;
+    height: 30rem;
 }
 .ProfileCard p {
     font-size: small;
@@ -146,19 +151,27 @@ main {
     justify-content: space-evenly;
     align-items: center;
 }
+AllGames h1{
+    margin-left: 40%;
+    color: cadetblue;
+}
 .games-table{
     padding: 1em;
     border: 2px solid cadetblue;
 }
 .games-table th{
+    padding: 1em;
     font-size: large;
+    color: cadetblue;
 }
 .games-table tr{
     font-size: medium;
     border: 2px solid cadetblue;
 }
 .games-table td{
+    padding: 1em;
     border: 2px solid cadetblue;
+    color: cadetblue;
 }
 @media (max-width: 500px) {
     main{

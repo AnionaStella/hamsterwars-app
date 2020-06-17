@@ -114,6 +114,7 @@ main {
     width: 20rem;
     height: 30rem;
     margin-bottom: 1em;
+    text-align: center;
 
 }
 .ProfileCard p {
@@ -124,8 +125,8 @@ main {
     flex-wrap: wrap;
 }
 .ProfileCard img {
-    max-width: 10rem;
-    max-height: 10rem;
+    max-width: 12rem;
+    max-height: 12rem;
     border-radius: 25%;
 }
 .hamsterForm input{

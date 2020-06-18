@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 
-
 function NewHamster () {
     const [name, setName] = useState('');
     const [age, setAge] = useState(null);
@@ -12,10 +11,6 @@ function NewHamster () {
     const [foodTouched, setFoodTouched] = useState('');
     const [ageTouched, setAgeTouched] = useState('');
     const [lovesTouched, setLovesTouched] = useState('');
-
-    // const stopSubmit = event => {
-    //     event.preventDefault();
-    // }
     
     let [nameClass, nameError] = nameTouched
         ? isValidString(nameTouched)
@@ -40,7 +35,7 @@ function NewHamster () {
         loves === '';    
 
     
-    return(
+    return (
         <div className="hamsterForm">
                 <div>
                     <label>Name: </label>
@@ -85,7 +80,7 @@ function NewHamster () {
                 <button disabled={ disableButton } onClick={() => saveHamster(name, age, food, loves, setNewHamster)}>Save hamster</button>
             <p>{ newHamster ? newHamster + ' was added.' : '' }</p>
         </div>
-    )
+    );
 
 }
 
@@ -100,10 +95,10 @@ async function saveHamster (name, age, food, loves, setNewHamster) {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(hamster)
-    };
-    const resp = await fetch('/api/hamsters', requestOptions)
+    }
+    const resp = await fetch('/api/hamsters', requestOptions);
     let savedHamster = await resp.json();
-    setNewHamster(savedHamster.name)
+    setNewHamster(savedHamster.name);
 }
 
 function isValidString(value) {
@@ -115,7 +110,7 @@ function isValidString(value) {
 }
 
 function isValidNumber(value) {
-    if( !isNaN(Number(value)) ) {
+    if (!isNaN(Number(value)) ) {
         return ['valid', ''];
     } else {
         return ['invalid', 'Please enter a number']

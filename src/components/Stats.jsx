@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
-// import AllGames from './AllGames'
 import ProfileCard from "./ProfileCard";
 import MostBattled from './MostBattled';
 
-function Stats (){
+function Stats() {
     
     const totalUrl = '/api/stats/total';
     const [total, setTotal] = useState(null);
@@ -19,6 +18,7 @@ function Stats (){
         }
         fetchData();
     },[]);
+
     useEffect(() => {
         async function fetchData() {
             const resp = await fetch(url+'top');
@@ -27,6 +27,7 @@ function Stats (){
         }
         fetchData();
     },[]);
+
     useEffect(() => {
         async function fetchData() {
             const resp = await fetch(url+'bottom');
@@ -42,7 +43,7 @@ function Stats (){
     if (bestData !== null) {
          bestHamsters = bestData.map((hamster, counter) => {
             return (
-            <div key={hamster.id}>{counter + 1 }. <ProfileCard hamster={hamster}/></div>
+                <div key={hamster.id}>{counter + 1 }. <ProfileCard hamster={hamster}/></div>
             );
          }
     )}
@@ -51,7 +52,7 @@ function Stats (){
     if (worstData !== null) {
          worstHamsters = worstData.map((hamster, counter) => {
             return (
-            <div key={hamster.id}>{counter + 1 }. <ProfileCard hamster={hamster}/></div>
+                <div key={hamster.id}>{counter + 1 }. <ProfileCard hamster={hamster}/></div>
             );
          }
     )}
@@ -72,7 +73,7 @@ function Stats (){
                 <MostBattled></MostBattled>
             </div>
         </div> 
-    )
+    );
 }
 
 

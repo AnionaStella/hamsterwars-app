@@ -17,16 +17,17 @@ const HamsterList = () => {
 
     let allHamsters;
     if (data !== null) {
-         allHamsters = data.map(hamster => (
+        allHamsters = data.map(hamster => (
             <div key={hamster.id} ><ProfileCard hamster={hamster}/></div>
             )
-    )}
+        )
+    }
 
     return (
         <div>
             <h1 className="allHamsters">Meet the hamsters</h1>
             <div className="hamsterList">{allHamsters}</div>
         </div>
-    )
+    );
 }
 export default HamsterList;

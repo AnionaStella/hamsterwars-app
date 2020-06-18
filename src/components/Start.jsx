@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Start = () => (
 
@@ -10,5 +10,7 @@ const Start = () => (
         <h2>Let the wars begin!</h2>
         <Link to="/battle">Battle</Link>
     </div>
+
 );
+
  export default Start;

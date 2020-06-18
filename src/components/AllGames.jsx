@@ -40,7 +40,7 @@ const AllGames = () => {
          });
     }
 
-    return(
+    return (
         <div>
             <h1 className="all-games">All games played: </h1>
             <table className="games-table">
@@ -52,14 +52,14 @@ const AllGames = () => {
                 {allGames}
             </table>
         </div>
-    )
+    );
 }
+
 function padZero(number) {
 
-    if(number < 10) {
+    if (number < 10) {
         return '0' + number
-    }
-    else{
+    } else {
         return number
     }
 

@@ -11,7 +11,6 @@ import Start from './components/Start';
 
 function App() {
 
-
   return (
     <Router>
       <header className="App-header">

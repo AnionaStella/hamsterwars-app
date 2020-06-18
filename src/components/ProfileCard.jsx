@@ -2,7 +2,6 @@ import React from 'react';
 
 const ProfileCard = ({ hamster }) => {
 
-    // får en hamster via props
     const imgUrl = "/api/assets/";
 
     return (
@@ -18,5 +17,5 @@ const ProfileCard = ({ hamster }) => {
         </div>
     );
 }
+
 export default ProfileCard;
-// Make a card that renders hamster and info for the voting

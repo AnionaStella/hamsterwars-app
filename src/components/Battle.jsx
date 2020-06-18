@@ -3,21 +3,18 @@ import { useHistory, useParams } from "react-router-dom";
 import PlayCard from './PlayCard';
 
 
-// import styled from 'styled-components';
-
 const Battle = () => {
 
     const [hamster1, setHamster1] = useState(null); 
     const [hamster2, setHamster2] = useState(null);
     const [toggleNewGame, setToggleNewGame] = useState(false);
-    // let card = '🐹';
+
     let history = useHistory();
     let routeChange = () => {
         let path = `/matchup/${hamster1.id}/${hamster2.id}`;
         history.push(path);
       }
     
-
     let {id1, id2} = useParams();  
 
     useEffect(() => {
@@ -53,7 +50,7 @@ const Battle = () => {
         battleHamster2 = (<div onClick={() => saveGame(hamster1, hamster2, hamster2, routeChange)}>
                 <PlayCard hamster={hamster2}/></div>)
     }
-    return(
+    return (
         <div className="Battle">
             <h1 className="battle-h1">HamsterWars!</h1>
             <p className="battle-p">Click on the hamster you think should win!</p>
@@ -83,9 +80,10 @@ const saveGame = async (hamster1, hamster2, winningHamster, routeChange) => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(game)
     };
-    const resp = await fetch('/api/games', requestOptions)
+    const resp = await fetch('/api/games', requestOptions);
     await resp.json();
-    routeChange()   
+    routeChange();   
                
 }
+
 export default Battle;

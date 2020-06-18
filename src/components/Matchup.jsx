@@ -27,14 +27,14 @@ function Matchup () {
             <p>{battle.winner.name} loves {battle.winner.loves}</p>
             <p>{battle.winner.name}s favorite food is {battle.winner.favFood}, so make sure to put some more in the bowl for dinner. </p> 
             </>
-            )
-         }
+        )
+    }
 
-    return(
+    return (
         <div className="matchup">
            {bataille}
         </div>
-    )
-
+    );
 }
+
 export default Matchup;

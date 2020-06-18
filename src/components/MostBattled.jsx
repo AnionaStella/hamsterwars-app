@@ -21,6 +21,7 @@ const MostBattled = () => {
         <div>
             {(hamster !== null) ? <> <div><ProfileCard hamster={hamster}/></div> </> : ''}
         </div>
-    )
+    );
 }
+
 export default MostBattled;
